@@ -14,3 +14,10 @@ public:
         return res;
     }
 };
+
+
+int main()
+{
+    Solution solution;
+    // solution.transpose();
+}
