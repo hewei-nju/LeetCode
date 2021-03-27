@@ -65,5 +65,6 @@
     "workbench.colorCustomizations": {
         // 设置光标颜色
         "editorCursor.foreground": "#00ff00"
-    }
+    },
+    "window.zoomLevel": -1
 }
