@@ -59,3 +59,19 @@ public:
 
 
 > 统计所有数字中每个位中1出现的总数，那么对于某个位，1出现的次数一定是3的倍数+1或0，那么对这个数%3得到的结果就是目的数字在该位上的值
+
+
+#### 205-同构字符串
+> 这题我的思路和题解一样，然后突然看到一个朋友的题解，贼强！！！，贴下面了
+
+```c++
+class Solution {
+public:
+    bool isIsomorphic(string s, string t) {
+        for(int i = 0; i < s.size(); ++i)
+            if(s.find(s[i]) != t.find(t[i]))
+                return false;
+        return true;
+    }
+};
+```
