@@ -68,5 +68,5 @@
         // 设置光标颜色
         "editorCursor.foreground": "#00ff00"
     },
-    "window.zoomLevel": -1
+    "window.zoomLevel": -0.75
 }

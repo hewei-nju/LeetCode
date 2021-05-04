@@ -1,46 +1,80 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
-// union Matrix
-// {
-//     struct
-//     {
-//         double _a11, _a12, _a13;
-//         double _a21, _a22, _a23;
-//         double _a31, _a32, _a33;
-//     };
+class CString {   
+    char *p; 
+    int size;
+public:
+   CString(int x):size(x),p(new char[size]){}    
+};
 
-//     double _element[3][3];
+
+
+// class A {     
+//     int x;
+//     const int y;
+//     int& z;
+// 	public:
+//         A(): y(1),z(x), x(0)  {  x = 100; }
+//         void print() {
+//             cout << x << " " << y << " " << z << endl;
+//         }
 // };
 
-/**
- * Union结构中，是共享存储空间的，所以实际上_element和_a11,...,_a33是同一块区域的数据
- * 上述Union结构可以对3x3的矩阵通过_element实现批量处理；
- * 也可以通过_a11,...,_a33实现单独元素的处理，避免了一个一个取值的麻烦
- * 
-*/
+class A {
+    int x;
+    public:
+        A() { 
+            cout << x << endl;
+            x = 10;
+        }
+};
 
-// int main() {
-//     Matrix matrix;
-//     for (int i = 0; i <= 2; ++i) {
-//         for (int j = 0; j <= 2; ++j) {
-//             cin >> matrix._element[i][j];
-//         }
-//     }
-//     double v = matrix._a11*matrix._a22*matrix._a33 + 
+int main()
+{
+    // CString str= CString(5);
+    // int a;
+    // cout << a << endl;
+    // A a = A();
+    // a.print();
+    A a = A();
+}
+
+
+// class A{
+//     public:
+//         A();
+//         A(int i);
+//         A(char *p);
+// };
+
+
+// int main()
+// {
+//     A a[4];
+
+//     return 0;
 // }
 
 
 
+// class Test{
+// private:
+//     int year;
+//     int month;
+//     int day;
 
-struct
-{
-    int a1;
-    int a2;
-    int a3;
-} data={1,2,3};
-int main ()
-{
-    printf("%d, %d, %d", data.a1, data.a2, data.a3);
-    return 0;
-}
+// public:
+//     std::string getDate() { 
+//         return to_string(this->year) + "-" + to_string(this->month) + "-" + to_string(this->day);
+//     }
+// };
+
+// int main()
+// {
+//     Test t;
+//     cout << t.getDate() << flush;
+
+//     // retunr 0;
+// }
