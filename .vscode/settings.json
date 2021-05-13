@@ -61,12 +61,16 @@
         "xstring": "cpp"
     },
     "files.autoSave": "afterDelay",
-    "workbench.colorTheme": "Monokai",
+    "workbench.colorTheme": "GitHub Dark",
     "workbench.preferredDarkColorTheme": "Monokai",
     "editor.cursorStyle": "line",
     "workbench.colorCustomizations": {
         // 设置光标颜色
         "editorCursor.foreground": "#00ff00"
     },
-    "window.zoomLevel": -0.75
+    "window.zoomLevel": -0.75,
+    "editor.fontFamily":  "'Fira Code','Consolas', 'JetBrains Mono', 'Cascadia Code','IBM Plex Mono', 'Ubuntu Mono', 'monospace', monospace",
+    "editor.fontSize": 15,
+    "terminal.integrated.fontSize": 15,
+
 }
