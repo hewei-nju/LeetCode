@@ -119,3 +119,40 @@ public:
 4. 然后我看了题解后，发现非常巧妙！因为整个动态转移，我用i步走到当前位置的可能数，都等于我用了i-1步走了最多离我一步远的位置可能数(暂时不考虑边界)，也就是说它都只与前一步相关。因此，我们可以通过。
 5. 一维动态规划，dp[i]表示走了dp[i]步到达i这个位置。于是我们想要知道dp[i] = dp[i] + dp[i-1] + dp[i+1]，我们就得知道走了dp[i]可能的次数了。
 6. 因此，我们可以一个一维数组不断迭代，获取走了steps(1,-1,0都算一步)的各个位置的可能方案数。
+
+
+#### 123-买股票的最佳时机III
+1. /**
+         * min1 max1 min2 max2 minT maxT
+         * min1 < max1, max1 > min2, min2 < max2, max2 > minT, minT < maxT
+         * max has five choices bellow:
+         * min1 max1 min2 max2
+         * min1 max1 min2 maxT
+         * min1 max1 minT maxT
+         * min1 max2 minT maxT
+         * min2 max2 minT maxT
+        */
+2. 上面是我最初的算法，然后编写的代码能够过203/214个用例，但是，其实这个算法并不是严格正确的！比如用例如下：18,9305,107,9957,1,4303,131,9996,2,9214,1007,9972。
+3. 正确解法：
+```
+1. 对于任何一天结束后，股民有一下几种选择：
+    1. 没进行任何操作
+    2. 进行了一次买
+    3. 进行了一次卖
+    4. 进行了第二次买
+    5. 进行了第二次卖
+2. 对于1.1，显然利润为0；不妨记上述其他四种的最大利润为b1,s1,b2,s2.
+3. 则有b1 = max(b1, b1 - p); s1 = max(s1, b1 + p); b2 = max(b2, s1 - p); s2 = max(s2, b2 + p);
+```
+4. https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/
+5. https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/
+6. https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/
+
+
+#### 309-最佳买卖股票时机含冷冻期
+0. 设当天的三种最大收入分别为：buy为买进的最大收入，sell为卖出的最大收入，freeze为冷冻的最大收入
+1. 对于第i天买进的最大收入buy = max(buy, freeze - p); // max中的buy和freeze都是前一天的记录
+2. 对于第i天卖出的最大收入sell = max(sell, buy + p); // 同上
+3. 对于第i天冷冻的最大收入freeze = sell; // 等于上次卖出的收入
+
+#### 
