@@ -58,7 +58,9 @@
         "streambuf": "cpp",
         "typeinfo": "cpp",
         "xiosbase": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "queue": "cpp",
+        "stack": "cpp"
     },
     "files.autoSave": "afterDelay",
     "workbench.colorTheme": "GitHub Dark",
