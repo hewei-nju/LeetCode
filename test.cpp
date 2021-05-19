@@ -4,18 +4,11 @@
 
 using namespace std;
 
-extern const int i;
-int get() 
-{
-    return 2;
-}
 
 int main()
 {
-
-
-    cout << i << endl;
-    ;
+    if (isalpha('1'))
+        cout << (char)tolower('s') << endl;
 }
 
 
