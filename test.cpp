@@ -33,22 +33,26 @@ int binarySearch(int val, vector<int> &nums)
 
 int main()
 {
-    vector<int> vec;
-    // cout << binarySearch(2, vec) << endl;
-    for (int i = 1; i <= 999999; ++i) {
-        for (int j = 1; j <= i; ++j) {
-            vec.push_back(j);
-        }
-        int val = 1;
-        while (val <= vec.size()) {
-            if (val != binarySearch(val, vec) + 1) {
-                cout << "false" << endl;
-                cout << val << " " << i << endl;
-                return 0;
-            }
-            val += 1;
-        }
-    }
-    // cout << binarySearch(val, vec) << endl;
-    cout << "true" << endl;
+    // vector<int> vec;
+    // // cout << binarySearch(2, vec) << endl;
+    // for (int i = 1; i <= 999999; ++i) {
+    //     for (int j = 1; j <= i; ++j) {
+    //         vec.push_back(j);
+    //     }
+    //     int val = 1;
+    //     while (val <= vec.size()) {
+    //         if (val != binarySearch(val, vec) + 1) {
+    //             cout << "false" << endl;
+    //             cout << val << " " << i << endl;
+    //             return 0;
+    //         }
+    //         val += 1;
+    //     }
+    // }
+    // // cout << binarySearch(val, vec) << endl;
+    // cout << "true" << endl;
+
+    int a[4][20];
+    cout << sizeof(a) << endl;
+    cout << a << endl;
 }
