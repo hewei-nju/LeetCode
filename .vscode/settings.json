@@ -1,5 +1,6 @@
 {
     "C_Cpp.errorSquiggles": "Enabled",
+    "C_Cpp.clang_format_style": "webkit",
     "files.associations": {
         "*.ejs": "html",
         "*.js": "html",
@@ -60,10 +61,32 @@
         "xiosbase": "cpp",
         "xstring": "cpp",
         "queue": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "xutility": "cpp",
+        "ios": "cpp",
+        "xfacet": "cpp",
+        "xhash": "cpp",
+        "xlocale": "cpp",
+        "xlocinfo": "cpp",
+        "xlocnum": "cpp",
+        "xmemory": "cpp",
+        "xmemory0": "cpp",
+        "xstddef": "cpp",
+        "xtr1common": "cpp",
+        "xtree": "cpp",
+        "any": "cpp",
+        "chrono": "cpp",
+        "locale": "cpp",
+        "ratio": "cpp",
+        "typeindex": "cpp",
+        "variant": "cpp",
+        "xlocbuf": "cpp",
+        "xlocmes": "cpp",
+        "xlocmon": "cpp",
+        "xloctime": "cpp"
     },
     "files.autoSave": "afterDelay",
-    "workbench.colorTheme": "GitHub Dark",
+    "workbench.colorTheme": "Default Dark+",
     "workbench.preferredDarkColorTheme": "Monokai",
     "editor.cursorStyle": "line",
     "workbench.colorCustomizations": {
@@ -71,9 +94,14 @@
         "editorCursor.foreground": "#00ff00"
     },
     "window.zoomLevel": -0.75,
-    "editor.fontFamily":  "'Fira Code','Consolas', 'JetBrains Mono', 'Cascadia Code','IBM Plex Mono', 'Ubuntu Mono', 'monospace', monospace",
-    "editor.fontSize": 15,
-    "terminal.integrated.fontSize": 15,
+    "editor.fontFamily": "'JetBrains Mono', 'Fira Code','Consolas', 'Cascadia Code','IBM Plex Mono', 'Ubuntu Mono', 'monospace'",
+    "editor.fontSize": 13,
+    "terminal.integrated.fontSize": 12,
     "python.pythonPath": "C:\\Users\\hewei\\AppData\\Local\\Programs\\Python\\Python37\\python.exe",
-
+    // vscode-fileheader
+    "fileheader.tpl": "/*\r\n * @Author: {author} \r\n * @Email: heweibright@gmail \r\n * @Date: {createTime} \r\n * @Last Modified by:   {lastModifiedBy} \r\n * @Last Modified time: {updateTime} \r\n */\r\n",
+    "fileheader.Author": "hewei",
+    "fileheader.LastModifiedBy": "hewei",
+    // 使用cmake配置c++项目，解决配置了CMakeLists.txt文件后，头文件仍然爆红
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
 }
